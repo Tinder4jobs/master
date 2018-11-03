@@ -7,7 +7,7 @@
     var i;
 
     for (i = 0; i < data.length; i++) {
-      CardData += '<li class="card">';
+      CardData += '<li class="card" data-id="'+ data[i].id +'">';
       CardData += '<h3>'+ data[i].text +'</h3>';
       CardData += '<img src="'+ data[i].image +'" alt="">';
       CardData += '</li>';
@@ -19,14 +19,6 @@
 
 
   /*Post the JSON datae*/
-  $.ajax({
-    type: 'POST',
-    url: 'http://localhost:5000/response/qwe',
-    data: '{"id": 1, "response": true, "relevance": 0.3}', // or JSON.stringify ({name: 'jonas'}),
-    success: function(data) { alert('data: ' + data); },
-    contentType: "application/json",
-    dataType: 'json'
-  });
 
 
   var animating = false;
@@ -44,6 +36,20 @@
             card: t.parentNode.querySelector('.card')
           }
         );
+
+        /*Get the data & answer from the current slide*/
+        var dataId = $('.current').attr('data-id');
+        var answer = false;
+
+        /*Post the answers like JSON via ajax*/
+        $.ajax({
+          type: 'POST',
+          url: 'http://35.231.77.246/response/qwe',
+          data: '{"id": '+dataId+', "response": '+answer+', "relevance": 0.5}', // or JSON.stringify ({name: 'jonas'}),
+          success: function(data) { alert('data: ' + data); },
+          contentType: "application/json",
+          dataType: 'json',
+        });
       }
       if (t.className === 'but-yay') {
         t.parentNode.classList.add('yes');
@@ -55,6 +61,19 @@
             card: t.parentNode.querySelector('.card')
           }
         );
+        /*Get the data & answer from the current slide*/
+        var dataId = $('.current').attr('data-id');
+        var answer = true;
+
+        /*Post the answers like JSON via ajax*/
+        $.ajax({
+          type: 'POST',
+          url: 'http://35.231.77.246/response/qwe',
+          data: '{"id": '+dataId+', "response": '+answer+', "relevance": 0.5}', // or JSON.stringify ({name: 'jonas'}),
+          success: function(data) { alert('data: ' + data); },
+          contentType: "application/json",
+          dataType: 'json',
+        });
       }
       if (t.classList.contains('current')) {
         fireCustomEvent('cardchosen',
