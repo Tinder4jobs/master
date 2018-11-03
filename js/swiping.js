@@ -1,4 +1,34 @@
 (function(){
+  http://localhost:5000/response/qwe -XPOST -d '{"id": 1, "response": true, "relevance": 0.3}'
+
+  /*Get the JSON data & display it on the index page*/
+  $.getJSON('http://35.231.77.246/question/test', function(data) {
+    var CardData = "";
+    var i;
+
+    for (i = 0; i < data.length; i++) {
+      CardData += '<li class="card">';
+      CardData += '<h3>'+ data[i].text +'</h3>';
+      CardData += '<img src="'+ data[i].image +'" alt="">';
+      CardData += '</li>';
+    }
+    $('.cardlist').append(CardData);
+
+    $('.cardlist li:first-child').addClass('current');
+  });
+
+
+  /*Post the JSON datae*/
+  $.ajax({
+    type: 'POST',
+    url: 'http://localhost:5000/response/qwe',
+    data: '{"id": 1, "response": true, "relevance": 0.3}', // or JSON.stringify ({name: 'jonas'}),
+    success: function(data) { alert('data: ' + data); },
+    contentType: "application/json",
+    dataType: 'json'
+  });
+
+
   var animating = false;
 
   function animatecard(ev) {
