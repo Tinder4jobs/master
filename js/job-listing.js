@@ -10,7 +10,7 @@ $.getJSON('http://35.231.77.246/matches/qwe', function(data) {
     MatchesData += '<img src="'+ data[i].image +'" alt="'+ data[i].username+'" width="100%" height="auto"></div>';
     MatchesData += '<h3>'+ data[i].username +'</h3>';
     MatchesData += '<p>'+ data[i].description +'</p>';
-    MatchesData += '<p>'+ data[i].location +'"</p>';
+    MatchesData += '<p>'+ data[i].location +'</p>';
     MatchesData += '<p>105%</p></a>';
     MatchesData += '</div>';
 
