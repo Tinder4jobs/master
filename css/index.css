@@ -1,19 +1,24 @@
+/*Nav logo*/
+.navbar-brand  {
+  width: 100px;
+  height:auto;
+}
+
 /* Design of a card */
 .card {
   font-size: 14px;
   line-height: 200px;
   text-align:center;
-  width: 150px;
+  width: 100%;
   height: 200px;
   display: block;
-  background: #666;
   -webkit-transform-origin: 50% 99%;
   transform-origin: 50% 99%;
 }
 .cardcontainer {
   padding: 10px;
   text-align: center;
-  width: 150px;
+  width: 100%;
 }
 
 /* List functionality */
