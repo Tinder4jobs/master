@@ -12,7 +12,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-</head>
+</head> 
 <body>
   <nav class="navbar navbar-default navbar-fixed navbar-inverse">
     <div class="container-fluid">
@@ -48,17 +48,78 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-  <section>
+  <section> 
+<!------ Include the above in your HEAD tag ---------->
 
-    <h1>Title</h1>
+<!--<center> <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Log in with linkedin
+</button> </center>--->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Log in with linkedin</h4>
+      </div> <!-- /.modal-header -->
+
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="uLogin" placeholder="Login">
+              <label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
+            </div>
+          </div> <!-- /.form-group -->
+
+          <div class="form-group">
+            <div class="input-group">
+              <input type="password" class="form-control" id="uPassword" placeholder="Password">
+              <label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
+            </div> <!-- /.input-group -->
+          </div> <!-- /.form-group -->
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div> <!-- /.checkbox -->
+        </form>
+
+      </div> <!-- /.modal-body -->
+
+      <div class="modal-footer">
+        <button class="form-control btn btn-primary">Ok</button>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
+            <span class="sr-only">progress</span>
+          </div>
+        </div>
+      </div> <!-- /.modal-footer -->
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  <br>
+  <br>
+  <br>
+  <center>  <img src="images/login_page.png"  alt="log in", width="350",height=＂200＂ /> </center>
+  
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </section>
 
   <footer>
   </footer>
 
-<script src="js/linkedin.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script src="js/linkedin.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
